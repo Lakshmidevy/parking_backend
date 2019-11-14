@@ -54,10 +54,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+				
 		<dependency>
-			<groupId>org.codehaus.mojo</groupId>
+			<groupId>org.sonarsource.scanner.maven</groupId>
 			<artifactId>sonar-maven-plugin</artifactId>
-			<version>3.6.0.1398</version>
+			<version>3.7.0.1746</version>
+			<type>pom</type>
 		</dependency>
 		<dependency>
 			<groupId>io.springfox</groupId>
@@ -79,7 +81,7 @@
 	<distributionManagement>
           <snapshotRepository>
           <id>nexus</id>
-          <url>http://13.233.173.245:8081/nexus/content/repositories/snapshots/</url>
+          <url>http://13.233.120.153:8081/nexus/content/repositories/snapshots/</url>
           </snapshotRepository>
        </distributionManagement>
 
@@ -89,6 +91,15 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+
+                           <groupId>org.sonarsource.scanner.maven</groupId>
+
+                           <artifactId>sonar-maven-plugin</artifactId>
+
+                           <version>3.7.0.1746</version>
+
+                           </plugin>
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
